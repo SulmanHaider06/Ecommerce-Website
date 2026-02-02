@@ -1,46 +1,48 @@
-# Sulman Shop
+Sulman Shop
+This is a small full-stack e-commerce application built with Laravel (backend) and React (frontend).
 
-A small full-stack e-commerce application built with **Laravel** (backend) and **React** (frontend).
+Tech Stack
+Backend: Laravel (REST API)
 
-## Tech Stack
+Database: MySQL
 
-- **Backend**: Laravel (REST API)
-- **Database**: MySQL
-- **Frontend**: React.js
-- **API Requests**: Axios
+Frontend: React.js
 
-## Project Structure
+API Requests: Axios
 
-- **`backend/`**: Contains the Laravel REST API.
-- **`frontend/`**: Contains the React application.
+Project Structure
+backend/: Contains the Laravel REST API.
 
----
+frontend/: Contains the React application.
 
-## Setup Instructions
-
-### 1. Backend Setup (Laravel)
-
+Setup Instructions
+1. Backend Setup (Laravel)
 To set up the backend (Laravel), follow these steps:
 
-1. **Navigate to the Backend Directory**:
-   ```bash
-   cd backend
-Install Dependencies: Make sure Composer is installed, then run:
+Navigate to the Backend Directory:
+Run the following command to change to the backend directory:
+
+cd backend
+Install Dependencies:
+Make sure Composer is installed, then run the following command to install all the dependencies:
 
 composer install
-Setup Environment: Copy the environment configuration file:
+Setup Environment:
+Copy the environment configuration file to .env:
 
 cp .env.example .env
-Then, generate the application key:
+Then, generate the application key for encryption:
 
 php artisan key:generate
 Create Database:
-Ensure you have a MySQL database named ecommerce_db created locally.
+Ensure that you have a MySQL database named ecommerce_db created locally.
 
-Run Migrations: Apply the database migrations to set up the required tables:
+Run Migrations:
+Apply the database migrations to set up the required tables:
 
 php artisan migrate --seed
-Start the Server: Run the Laravel development server:
+Start the Server:
+Start the Laravel development server:
 
 php artisan serve
 The backend will be available at http://127.0.0.1:8000.
@@ -49,12 +51,15 @@ The backend will be available at http://127.0.0.1:8000.
 To set up the frontend (React), follow these steps:
 
 Navigate to the Frontend Directory:
+Change to the frontend directory:
 
 cd frontend
-Install Dependencies: Make sure Node.js is installed, then run:
+Install Dependencies:
+Make sure Node.js is installed, then run the following command to install the frontend dependencies:
 
 npm install
-Start the Development Server: Run the React development server:
+Start the Development Server:
+Start the React development server:
 
 npm run dev
 The frontend will be available at http://localhost:3000.
@@ -63,11 +68,17 @@ Environment Variables (Backend)
 In the backend/ directory, copy .env.example to .env and set the following variables:
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=ecommerce_db
+
 DB_USERNAME=root
-DB_PASSWORD=
+
+DB_PASSWORD= (leave empty by default for local setups)
+
 Assumptions
 MySQL is installed and running on port 3306.
 
@@ -76,7 +87,6 @@ A database named ecommerce_db must be created before running migrations.
 Node.js and Composer are installed on your machine.
 
 Notes
-The project uses Axios for making API requests between the React frontend and Laravel backend.
+This project uses Axios for making API requests between the React frontend and Laravel backend.
 
 If you encounter issues, ensure your environment is set up correctly (MySQL, Node.js, Composer).
-
