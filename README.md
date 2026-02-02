@@ -1,23 +1,28 @@
-Mini E-Commerce App
-A small full-stack e-commerce application built with Laravel (backend) and React (frontend).
+# Sulman Shop
 
-🚀 Tech Stack
-Backend: Laravel
+A small full-stack e-commerce application built with **Laravel** (backend) and **React** (frontend).
 
-Database: MySQL
+## 🚀 Tech Stack
 
-Frontend: React.js
+- **Backend:** Laravel  
+- **Database:** MySQL  
+- **Frontend:** React.js  
+- **HTTP Requests:** Axios
 
-HTTP Requests: Axios
+## 📂 Project Structure
 
-📂 Project Structure
-- backend/  → Laravel REST API
-- frontend/ → React application
-📝 Setup Instructions
-1. Backend Setup
-Navigate to the backend directory:
+backend/ → Laravel REST API
 
-cd backend
+frontend/ → React application
+
+
+## 📝 Setup Instructions
+
+### 1. Backend Setup
+
+1. **Navigate to the backend directory**:
+   ```bash
+   cd backend
 Install backend dependencies:
 
 composer install
