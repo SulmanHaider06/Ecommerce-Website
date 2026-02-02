@@ -16,52 +16,57 @@ backend/: Contains the Laravel REST API.
 frontend/: Contains the React application.
 
 Setup Instructions
-1. Backend Setup (Laravel)
-To set up the backend (Laravel), follow these steps:
-
-Navigate to the Backend Directory:
-Run the following command to change to the backend directory:
+Backend Setup (Laravel)
+Navigate to the Backend Directory
+In your terminal, run the following command to navigate to the backend directory:
 
 cd backend
-Install Dependencies:
-Make sure Composer is installed, then run the following command to install all the dependencies:
+
+Install Dependencies
+Ensure Composer is installed on your system. Then, install all backend dependencies by running:
 
 composer install
-Setup Environment:
-Copy the environment configuration file to .env:
+
+Setup Environment
+Copy the .env.example file to .env:
 
 cp .env.example .env
-Then, generate the application key for encryption:
+
+Next, generate the application key to handle encryption:
 
 php artisan key:generate
-Create Database:
-Ensure that you have a MySQL database named ecommerce_db created locally.
 
-Run Migrations:
-Apply the database migrations to set up the required tables:
+Create Database
+Ensure you have a MySQL database named ecommerce_db created on your local machine before running migrations.
+
+Run Migrations
+Apply the database migrations to set up the required tables in your database:
 
 php artisan migrate --seed
-Start the Server:
-Start the Laravel development server:
+
+Start the Server
+Start the Laravel development server with:
 
 php artisan serve
+
 The backend will be available at http://127.0.0.1:8000.
 
-2. Frontend Setup (React)
-To set up the frontend (React), follow these steps:
-
-Navigate to the Frontend Directory:
-Change to the frontend directory:
+Frontend Setup (React)
+Navigate to the Frontend Directory
+In your terminal, run the following command to navigate to the frontend directory:
 
 cd frontend
-Install Dependencies:
-Make sure Node.js is installed, then run the following command to install the frontend dependencies:
+
+Install Dependencies
+Ensure Node.js is installed on your system. Then, install all frontend dependencies by running:
 
 npm install
-Start the Development Server:
-Start the React development server:
+
+Start the Development Server
+Run the React development server with:
 
 npm run dev
+
 The frontend will be available at http://localhost:3000.
 
 Environment Variables (Backend)
@@ -80,7 +85,7 @@ DB_USERNAME=root
 DB_PASSWORD= (leave empty by default for local setups)
 
 Assumptions
-MySQL is installed and running on port 3306.
+MySQL is installed and running on the default port 3306.
 
 A database named ecommerce_db must be created before running migrations.
 
@@ -89,4 +94,3 @@ Node.js and Composer are installed on your machine.
 Notes
 This project uses Axios for making API requests between the React frontend and Laravel backend.
 
-If you encounter issues, ensure your environment is set up correctly (MySQL, Node.js, Composer).
